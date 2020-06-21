@@ -25,3 +25,14 @@
     * use: : 처리할 파일 지정.
   * loader에서 console 변환 실습
     
+##커스텀 로더
+  * css-loader : css 파일을 모듈로 인식해서 자바스크립트 코드안에서 사용할 수 있다.
+  * npm install css-loader
+  * style-loader도 필요하다.?? -> 이유는 css가 자바스크립트 코드안에 문자열로 들어가 있어서.. cssom형태로 변경해야한다.
+  * loader는 여러개로도 사용가능하다 순서는 배열의 뒤부터 앞으로..
+
+  * file-loader : 이미지 파일 읽을 때 필요.
+  * 경로설정 필요. (./dist/)
+  
+  * url-loader : 이미지를 base64 스트링으로 변환하여 네트워크를 덜 타게..
+  * 적은용량의 이미지는 url-loader를 사용하도록 한다.

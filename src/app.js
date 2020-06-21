@@ -1,5 +1,6 @@
-import * as math from './math.js';
+import './app.css';
+import nyancat from '../resource/nyancat.jpg';
 
-console.log(math.standardSum(1, 2));
-
-
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.innerHTML = `<img src="${nyancat}" />`
+})
