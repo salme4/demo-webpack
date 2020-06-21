@@ -1,4 +1,5 @@
 #Webpack
+http://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html
 
 ## IIFE
   * 즉시 실행 함수 표현
@@ -47,3 +48,21 @@
   * HTMLTemplatePlugin : html 파일 처리 
   * CleanWebapckPlugin : 빌드 할 때 output 폴더를 삭제해준다.
   * MiniCssExtractPlugin: CSS별로 파일을 뽑아낸다. -> style-loader 대신 제공하는 로더를 사용한다.
+  
+  
+#Bable
+  * 크로스브라우징의 혼란을 해결해 줄 수 있는 것
+  * ECMAScript2015+로 작성한 코드를 모든 브라우져에서 동작하도록 호환성을 지켜준다.
+  * babel 설치 : npm install @babel/core @babel/cli
+  * babel 사용 : node_modules\.bin\babel app.js 또는 npx babel app.js
+  * 빌드 과정 : 파싱 -> 변환 -> 출력
+  
+##커스텀 플러그인
+  * babel 플러그인 사용
+  * babel 프리셋 적용
+  
+##babel 실제 사용하기 (preset 사용)
+  * preset-env
+  * preset-flow
+  * preset-react
+  * preset-typescript
