@@ -1,3 +1,4 @@
+#Webpack
 
 ## IIFE
   * 즉시 실행 함수 표현
@@ -8,7 +9,7 @@
   * export, import 키워드를 지원함.
   
 ##Webpack이 필요한 이유
-  * module 타입을 어느 브라우져에서 사용하기 위함이다.
+  * module 타입을 어느 브라우져에서든 사용하기 위함이다.
   * 여러개의 파일을 하나로 합치는 번들러이다.
   * webpack 명령어 필수 옵션
     * --mode : development, production, none
@@ -40,5 +41,9 @@
 ##플러그인
   * 번들된 결과물을 처리한다. -> 난독화, 특정 텍스트 추출하는 용도
   
-
-  
+##자주사용하는 플러그인
+  * BannerPlugin : webpack에서 제공해주며, 결과물 상단에 메세지를 넣을 수 있다.
+  * DefinePlugin : 개발과 운영환경을 나누어 관리 (process.env.NODE_ENV) webpack 의 mode를 따라감. -> code를 넣을 수 있음 문자열로 넣으려면 JSON.stringify
+  * HTMLTemplatePlugin : html 파일 처리 
+  * CleanWebapckPlugin : 빌드 할 때 output 폴더를 삭제해준다.
+  * MiniCssExtractPlugin: CSS별로 파일을 뽑아낸다. -> style-loader 대신 제공하는 로더를 사용한다.
