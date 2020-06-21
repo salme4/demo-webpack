@@ -15,4 +15,13 @@
     * --entry : 모듈의 시작점
     * --output, -o : 결과 저장 path 설정
   * webpack.config.js 에 옵션을 추가 하여 npm 명령어로 빌드(번들링)한다.
+  
+##로더
+  * webpack에서의 loader는 모든 파일(스타일시트, 이미지, 폰트 등)을 모듈로 바라본다.
+  * import 구문을 사용하면 자바스크립트 코드 안으로 가져올 수 있다.
+  * my-webpack-loader.js 파일 추가
+  * webpack.config에 module.rules 배열 추가
+    * test : //처리해야할 파일의 패턴(정규식)
+    * use: : 처리할 파일 지정.
+  * loader에서 console 변환 실습
     
