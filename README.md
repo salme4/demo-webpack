@@ -50,19 +50,25 @@ http://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html
   * MiniCssExtractPlugin: CSS별로 파일을 뽑아낸다. -> style-loader 대신 제공하는 로더를 사용한다.
   
   
-#Bable
-  * 크로스브라우징의 혼란을 해결해 줄 수 있는 것
-  * ECMAScript2015+로 작성한 코드를 모든 브라우져에서 동작하도록 호환성을 지켜준다.
+#Babel
+  * babel.config.js 파일로 설정을 사용한다.
+  * 브라우져마다 사용하는 언어가 달라 프론트엔드 코드가 일관적이지 못할 때가 많다. -> 크로스브라우징의 혼란을 해결해 줄 수 있는 것 
+  * ES5로 변환.
+  * ECMAScript2015+ 이상의 작성한 코드를 모든 브라우져에서 동작하도록 호환성을 지켜준다.
   * babel 설치 : npm install @babel/core @babel/cli
   * babel 사용 : node_modules\.bin\babel app.js 또는 npx babel app.js
-  * 빌드 과정 : 파싱 -> 변환 -> 출력
+  * 빌드 과정 : 파싱 -> 변환(babel plugins) -> 출력
   
 ##커스텀 플러그인
-  * babel 플러그인 사용
-  * babel 프리셋 적용
+  * babel 플러그인 사용해 보기
+    * @babel/plugin-transform-block-scoping
+    * @babel/plugin-transform-arrow-functions
+    * @babel/plugin-transform-strict-mode
+  * babel 프리셋 적용 : 목적에 맞는 플러그인을 모아놓은 preset.
   
 ##babel 실제 사용하기 (preset 사용)
-  * preset-env
-  * preset-flow
-  * preset-react
-  * preset-typescript
+  * npm i preset-env
+  * npm i preset-flow
+  * npm i preset-react
+  * npm i preset-typescript
+  * 타겟 브라우져 설정 가능

@@ -1,4 +1,4 @@
-module.exports = function myBebelPreset() {
+module.exports = function myBabelPreset() {
     return {
         plugins: [
             '@babel/plugin-transform-block-scoping', //let, const -> var
