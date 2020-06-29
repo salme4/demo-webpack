@@ -67,8 +67,20 @@ http://jeonghwan-kim.github.io/series/2019/12/09/frontend-dev-env-npm.html
   * babel 프리셋 적용 : 목적에 맞는 플러그인을 모아놓은 preset.
   
 ##babel 실제 사용하기 (preset 사용)
-  * npm i preset-env
+  * npm i preset-env : babel7 이전에는 babel-reset-es2015, babel-reset-es2016 ... latest) 였지만, 지금은 env로 합쳐졌다. 
   * npm i preset-flow
   * npm i preset-react
   * npm i preset-typescript
-  * 타겟 브라우져 설정 가능
+
+##타겟 브라우져 설정 하기 
+특정 브라우져(e.g chrome 83)만 지원하겠다는 전제가 있다면, babel 설정에 target 옵션에 브라우져 버전명만 지정하면 env프리셋은 그에 맞는 최적의 코드를 출력해 낸다.
+  * https://caniuse.com -> javascript 문법 지원 브라우져 검색(e.g const, arrow)
+
+##폴리필
+ie 는 promise를 지원하지 않는다.
+babel 은 ECMAScript2015+를 ECMAScript5 버전으로 변환할 수 있는 것만 빌드한다.
+promise는 대체할 수는 없지만, 구현할 수는 있다. (core-js 에서 구현)
+그렇지 못한 것들은 `폴리필` 이라고 부르는 코드조각을 추가해서 해결한다.
+
+##webpack과 통합
+  * npm install -D babel-loader

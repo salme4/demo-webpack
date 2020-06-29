@@ -1,0 +1,1 @@
+new Promise(); //es6 객체
